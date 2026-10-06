@@ -1,0 +1,40 @@
+{
+  "name": "srpk",
+  "version": "1.0.0",
+  "description": "Backend of automate business project-srpk-prashant",
+  "keywords": [
+    "backend",
+    "nodejs",
+    "prashant",
+    "srpk"
+  ],
+  "license": "ISC",
+  "author": "SRPK-Prashant",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.6.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.0",
+    "multer": "^2.0.0",
+    "nanoid": "^5.1.5",
+    "node-cron": "^4.2.0",
+    "nodemailer": "^7.0.3",
+    "razorpay": "^2.9.6",
+    "sib-api-v3-sdk": "^8.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
