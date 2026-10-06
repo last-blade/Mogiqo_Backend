@@ -18,9 +18,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 //Webhook Route and Import------------------------------------
-
+import webhookRoute from "./routes/webhook.routes.js"
 //Webhook Route
-
+app.use("/api/whatsapp", webhookRoute)
 //------------------------------------------------------------
 
 app.use(express.json({limit: "1mb"}));
