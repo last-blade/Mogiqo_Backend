@@ -3,7 +3,7 @@ import axios from "axios";
 export const testWhatsApp = async (req, res) => {
   try {
     const response = await axios.get(
-      `https://graph.facebook.com/vXX.X/${process.env.WHATSAPP_PHONE_NUMBER_ID}`,
+      `https://graph.facebook.com/v26.0/${process.env.WHATSAPP_PHONE_NUMBER_ID}`,
       {
         headers: {
           Authorization: `Bearer ${process.env.META_ACCESS_TOKEN}`,
