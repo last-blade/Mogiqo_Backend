@@ -3,6 +3,11 @@ import dotenv from "dotenv"
 import cookieParser from "cookie-parser";
 import cors from "cors"
 
+//Webhook Route and Import------------------------------------
+import webhookRoute from "./routes/webhook.routes.js"
+//importing Routes
+import userRoute from "./routes/user.routes.js";
+
 dotenv.config({
     path: "./.env"
 });
@@ -17,10 +22,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-//Webhook Route and Import------------------------------------
-import webhookRoute from "./routes/webhook.routes.js"
-//Webhook Route
-app.use("/api/whatsapp", webhookRoute)
 //------------------------------------------------------------
 
 app.use(express.json({limit: "1mb"}));
@@ -29,10 +30,10 @@ app.use(cookieParser());
 app.use(express.static("public"));
 
 
-//importing Routes
-import userRoute from "./routes/user.routes.js";
 
 
+//Webhook Route
+app.use("/api/whatsapp", webhookRoute)
 //User Route
 app.use("/api/v1/user", userRoute);
 
