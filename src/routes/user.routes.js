@@ -4,6 +4,7 @@ import { loginUser } from "../controllers/userControllers/loginUser.controller.j
 import { changePassword } from "../controllers/userControllers/changePassword.controller.js";
 import { authMiddleware } from "../middlewares/auth.middleware.js";
 import { logoutUser } from "../controllers/userControllers/logoutUser.controller.js";
+import { testWhatsApp } from "../controllers/whatsappControllers/testWhatsApp.js";
 
 const router = Router();
 
@@ -12,5 +13,7 @@ router.route("/register").post(registerUser);
 router.route("/login").post(loginUser);
 router.route("/change-password").post(changePassword);
 router.route("/logout").post(authMiddleware, logoutUser);
+
+router.route("/test-whatsapp").get(testWhatsApp);
 
 export default router;
